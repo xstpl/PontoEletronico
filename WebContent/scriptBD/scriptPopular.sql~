@@ -1,0 +1,4 @@
+
+
+insert into Grupo (nome_grupo) values ('Administrador');
+insert into Pessoa (login, nome, senha, nome_grupo) values ('silas', 'silas','123', 'Administrador');

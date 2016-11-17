@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<f:metadata>
+		<f:viewParam name="codigo" value="#{cadastroPessoaBean.pessoa}"/>
+	</f:metadata>
+
+
+<ui:composition template="/templates/template.xhtml">
+
+	<ui:define name="tituloJanela">Sistema com JSF 2.0 e Facelets</ui:define>
+	<ui:define name="conteudo">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputText value="Login" />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.login}" />
+				<h:outputText value="Senha" />
+				<h:inputSecret value="#{cadastroPessoaBean.pessoa.senha}" />
+
+				<h:outputText value="Nome: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.nome}" />
+				<h:outputText value="Nome da Mãe: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.nomeMae}" />
+				<h:outputText value="Nome do Pai: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.nomePai}" />
+				<h:outputText value="Sobrenome: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.sobrenome}" />
+				<h:outputText value="Sobrenome da Mãe: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.sobrenomeMae}" />
+				<h:outputText value="Sobrenome do Pai: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.sobrenomePai}" />
+				<h:outputText value="Ultimonome: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.ultimonome}" />
+				<h:outputText value="Ultimonome da Mãe: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.ultimonomeMae}" />
+				<h:outputText value="Ultimonome do Pai: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.ultimonomePai}" />
+				
+				
+				<h:outputText value="Matricula: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.matricula}" />
+				<h:outputText value="CPF: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.cpf}" />
+				<h:outputText value="RG: " />
+				<h:inputText value="#{cadastroPessoaBean.pessoa.rg}" />
+				
+				<h:outputLabel value="Grupo"/>
+				<h:selectOneMenu value="#{cadastroPessoaBean.pessoa.grupo}" required="true" label="Grupo">
+				<f:selectItem itemLabel="Seleciona um Grupo" noSelectionOption="true"/>
+				<f:selectItems value="#{cadastroPessoaBean.grupos}" var="grupo" itemValue="#{grupo}" itemLabel="#{grupo.nome}"/>
+				</h:selectOneMenu>
+				
+												
+			</h:panelGrid>
+	
+			<h:commandButton action="#{cadastroPessoaBean.cadastrar()}"
+				value="Salvar" />
+		</h:form>
+		
+	</ui:define>>	
+	</ui:composition>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+	 <h:form>
+	 	<h:panelGrid columns="1">
+	 		<h:button value="Home" outcome="/index?faces-redirect=true" />
+	 		<h:button value="Adicionar Grupo" outcome="/ponto/Grupo?faces-redirect=true"/>
+	 		<h:button value="Listar Grupos" outcome="/ponto/ListarGrupos?faces-redirect=true" />
+	 		<h:button value="Adicionar Pessoa" outcome="/ponto/Pessoa?faces-redirect=true" />
+	 		<h:button value="Listar Pessoas" outcome="/ponto/ListarPessoas?faces-redirect=true" />
+	 		<h:button value="Cadastrar Horario" outcome="/ponto/ponto?faces-redirect=true" />
+			<h:commandLink value="Sair" action="#{cadastroPessoaBean.logout()}"></h:commandLink>
+	 	</h:panelGrid>
+	 </h:form> 
+</html>
+
